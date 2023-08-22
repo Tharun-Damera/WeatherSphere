@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="snow.png">
+</head>
+<body>
+
+    <header>
+        <img src="snow.png" alt="logo" class="logo">
+        <h1>WeatherSphere</h1>
+    </header>
+
+    <main>
+
+            <div id="permission-access">
+                <p>
+                    <span style="font-size: large;"><strong>Find Weather At Your Location</strong></span>
+                    <br><span style="font-size:small"> Click the button and grant location permission to find weather at your location</span>
+                </p>
+                <div>
+                    <button type="button" id="location-btn" onclick="getLocation()">
+                       <span>Current Location</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="search-box">
+                <h2 id="date"></h2>
+                <h3 id="time"></h3>
+                    <form class="form-el">
+                        <input type="search" class="search-bar" id="search-bar" placeholder="City Name">
+                        <button type="button" class="search-btn" id="search-btn">Search</button>
+                        <h5 class="error" id="error"></h5>
+                    </form>
+            </div>  
+
+            <div class="current-weather" id="current-weather">
+                <div id="c1">
+                    <img src="https://openweathermap.org/img/wn/50d@2x.png">
+                    <h3 style="text-align:center;">Haze</h3>
+                </div>
+                <div id="c2">
+                    <h3>Hyderabad</h3>
+                    <h2>23°C</h2>
+                    <h4>Feels like 21°C</h4>
+                    <h4>Humidity: 60%</h5>
+                    <h4>Pressure: 1.02 atm</h5>
+                    <h4>Wind Speed: 2.5 m / sec</h5>
+                    <h4>Sunrise time: 6.30 am</h5>
+                    <h4>Sunset time: 17.40 pm</h5>
+                </div>
+            </div>
+
+            <div id="seven-day-container">  
+                <div class="seven-day-el">
+                    <div class="day">Mon</div>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                    <div class="temp">Day: 23°C</div>
+                    <div class="temp">Night: 23°C</div>
+                </div>
+                <div class="seven-day-el">
+                    <div class="day">Tue</div>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                    <div class="temp">Day: 23°C</div>
+                    <div class="temp">Night: 23°C</div>
+                </div>
+                <div class="seven-day-el">
+                    <div class="day">Wed</div>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                    <div class="temp">Day: 23°C</div>
+                    <div class="temp">Night: 23°C</div>
+                </div>
+                <div class="seven-day-el">
+                    <div class="day">Thur</div>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                    <div class="temp">Day: 23°C</div>
+                    <div class="temp">Night: 23°C</div>
+                </div>
+                <div class="seven-day-el">
+                    <div class="day">Fri</div>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                    <div class="temp">Day: 23°C</div>
+                    <div class="temp">Night: 23°C</div>
+                </div>
+                <div class="seven-day-el">
+                    <div class="day">Sat</div>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                    <div class="temp">Day: 23°C</div>
+                    <div class="temp">Night: 23°C</div>
+                </div>
+                <div class="seven-day-el">
+                    <div class="day">Sun</div>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                    <div class="temp">Day: 23°C</div>
+                    <div class="temp">Night: 23°C</div>
+                </div>
+            </div>
+            
+            <div id="chart-container" >
+                <h2 style="color: #202A44;">24 HOUR FORECAST</h2>
+                <canvas id="chart"></canvas>
+            </div>
+
+    </main>
+
+    <footer >
+       <p style="text-align: center;"> Made By Batch A2</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
