@@ -161,7 +161,7 @@ async function showWeatherData(data) {
 
         currentWeatherItemsEl.innerHTML =
             `<div id="c1">
-            <img src="http://openweathermap.org/img/wn/${icon}@2x.png">
+            <img src="https://openweathermap.org/img/wn/${icon}@2x.png">
             <h3 style="text-align:center;">${description.toUpperCase()}</h3>
         </div>
         <div id="c2">
